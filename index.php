@@ -1,7 +1,9 @@
 <?php
 
 $result = "";
-$operation ='addition'; 
+$operation = 'addition';
+$nombre1 = "";
+$nombre2 = "";
 
 if (!empty($_GET['nombre1'])) {
     $nombre1 = $_GET['nombre1'];
@@ -15,27 +17,30 @@ if (!empty($_GET['operation'])) {
     $operation = $_GET['operation'];
 }
 
-if ($operation == 'addition') 
-{
-    $result = $nombre1 + $nombre2;
-} 
-    elseif ($operation =='soustraction') 
+if (is_numeric($nombre1) && is_numeric($nombre2)){
+    switch ($operation)
     {
-        $result = $nombre1 - $nombre2;
-    } 
-    elseif ($operation =='multiplication') 
-    {
-        $result = $nombre1 * $nombre2;
-    } 
-    elseif ($operation =='division') 
-    {
-        if ($nombre2 != 0) 
-        {
-            $result = $nombre1 / $nombre2;
-        } else {
-            echo 'il y a une erreur';
-        }
+        case 'addition':
+            $result = $nombre1 + $nombre2;
+            break;
+        case 'soustraction':
+            $result = $nombre1 - $nombre2;
+            break;
+        case 'multiplication':
+            $result = $nombre1 * $nombre2;
+            break;
+        case 'division':
+            if ($nombre2 != 0) {
+                $result = $nombre1 / $nombre2;
+            } else {
+                echo "Erreur : division par zéro";
+            }
+            break;
+        default:
+            echo "Opération non valide";
+            break;
     }
+}
 
 ?>
 
