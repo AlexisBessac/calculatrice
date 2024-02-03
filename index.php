@@ -33,7 +33,7 @@ if (is_numeric($nombre1) && is_numeric($nombre2)){
             if ($nombre2 != 0) {
                 $result = $nombre1 / $nombre2;
             } else {
-                echo "Erreur : division par zéro";
+                echo "Diviser un nombre par zéro n'est pas possible";
             }
             break;
         default:
