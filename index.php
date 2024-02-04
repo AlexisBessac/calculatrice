@@ -1,10 +1,12 @@
 <?php
 
+//Initialisation des valeurs
 $result = "";
 $operation = 'addition';
 $nombre1 = "";
 $nombre2 = "";
 
+// Traitement du formulaire OU des paramètres de l'URL
 if (!empty($_GET['nombre1'])) {
     $nombre1 = $_GET['nombre1'];
 }
@@ -17,6 +19,8 @@ if (!empty($_GET['operation'])) {
     $operation = $_GET['operation'];
 }
 
+
+//Si les valeurs sont des chiffres on fait les calculs demandés
 if (is_numeric($nombre1) && is_numeric($nombre2)){
     switch ($operation)
     {
@@ -55,14 +59,14 @@ if (is_numeric($nombre1) && is_numeric($nombre2)){
 
 <body>
     <form method="GET">
-        <input type="number" name="nombre1" placeholder="Entrer un nombre">
+        <input type="text" name="nombre1" placeholder="Entrer un nombre">
         <select name="operation" required>
             <option value="addition">+</option>
             <option value="subtraction">-</option>
             <option value="multiplication">*</option>
             <option value="division">/</option>
         </select>
-        <input type="number" name="nombre2" placeholder="Entrer un nombre">
+        <input type="text" name="nombre2" placeholder="Entrer un nombre">
         <button type="submit">=</button>
     </form>
     <?php if (!empty($nombre1) || !empty($nombre2)) : ?>
