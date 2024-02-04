@@ -1,6 +1,6 @@
 <?php
 
-//Initialisation des valeurs
+//Initialisation des variables
 $result = "";
 $operation = 'addition';
 $nombre1 = "";
