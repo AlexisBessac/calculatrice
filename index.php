@@ -21,9 +21,8 @@ if (!empty($_GET['operation'])) {
 
 
 //Si les valeurs sont des chiffres on fait les calculs demandés
-if (is_numeric($nombre1) && is_numeric($nombre2)){
-    switch ($operation)
-    {
+if (is_numeric($nombre1) && is_numeric($nombre2)) {
+    switch ($operation) {
         case 'addition':
             $result = $nombre1 + $nombre2;
             break;
@@ -70,7 +69,7 @@ if (is_numeric($nombre1) && is_numeric($nombre2)){
         <button type="submit">=</button>
     </form>
     <?php if (!empty($nombre1) || !empty($nombre2)) : ?>
-        <p>Le résultat de <?= $nombre1 ?> <?= $operation ?> <?= $nombre2 ?? ''  ?> et de : <?= $result ?></p>
+        <p>Le résultat est de : <?= $result ?></p>
     <?php endif; ?>
 </body>
 
