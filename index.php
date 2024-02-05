@@ -61,7 +61,7 @@ if (is_numeric($nombre1) && is_numeric($nombre2)) {
         <input type="text" name="nombre1" placeholder="Entrer un nombre">
         <select name="operation" required>
             <option value="addition">+</option>
-            <option value="subtraction">-</option>
+            <option value="soustraction">-</option>
             <option value="multiplication">*</option>
             <option value="division">/</option>
         </select>
