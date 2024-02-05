@@ -58,14 +58,14 @@ if (is_numeric($nombre1) && is_numeric($nombre2)) {
 
 <body>
     <form method="GET">
-        <input type="text" name="nombre1" placeholder="Entrer un nombre">
+        <input type="text" name="nombre1" placeholder="Entrer un nombre" required>
         <select name="operation" required>
             <option value="addition">+</option>
             <option value="soustraction">-</option>
             <option value="multiplication">*</option>
             <option value="division">/</option>
         </select>
-        <input type="text" name="nombre2" placeholder="Entrer un nombre">
+        <input type="text" name="nombre2" placeholder="Entrer un nombre" required>
         <button type="submit">=</button>
     </form>
     <?php if (!empty($nombre1) || !empty($nombre2)) : ?>
