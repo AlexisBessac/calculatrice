@@ -57,7 +57,7 @@ if (is_numeric($nombre1) && is_numeric($nombre2)) {
 </head>
 
 <body>
-    <section class="container">
+    <section>
     <form method="GET">
         <input type="text" name="nombre1" placeholder="Entrer un nombre" required>
         <select name="operation" required>
