@@ -7,15 +7,15 @@ $nombre1 = "";
 $nombre2 = "";
 
 // Traitement du formulaire OU des paramètres de l'URL
-if (!empty($_GET['nombre1'])) {
+if (isset($_GET['nombre1'])) {
     $nombre1 = $_GET['nombre1'];
 }
 
-if (!empty($_GET['nombre2'])) {
+if (isset($_GET['nombre2'])) {
     $nombre2 = $_GET['nombre2'];
 }
 
-if (!empty($_GET['operation'])) {
+if (isset($_GET['operation'])) {
     $operation = $_GET['operation'];
 }
 
@@ -43,6 +43,8 @@ if (is_numeric($nombre1) && is_numeric($nombre2)) {
             echo "Opération non valide";
             break;
     }
+} else {
+    echo "Erreur, veuiller saisir des nombres valides";
 }
 
 ?>
